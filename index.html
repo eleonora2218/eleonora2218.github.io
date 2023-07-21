@@ -1,7 +1,624 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+
+<head>
+  <title>3D Model panchina Gaudì</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!-- 
+Impulse Template
+http://www.templatemo.com/tm-469-impulse
+-->
+  <!-- STYLESHEET CSS FILES -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/nivo-lightbox.css">
+  <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css" />
+  <link type="text/css" rel="stylesheet" href="stylesheet/3dhop_panels.css" />
+  <link type="text/css" rel="stylesheet" href="stylesheet/hotspots.css" />
+  <!--SPIDERGL-->
+  <script type="text/javascript" src="js/spidergl.js"></script>
+  <!--JQUERY-->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <!--PRESENTER-->
+  <script type="text/javascript" src="js/presenter.js"></script>
+  <!--3D MODELS LOADING AND RENDERING-->
+  <script type="text/javascript" src="js/nexus.js"></script>
+  <script type="text/javascript" src="js/ply.js"></script>
+  <!--TRACKBALLS-->
+  <script type="text/javascript" src="js/trackball_turntable.js"></script>
+  <script type="text/javascript" src="js/trackball_turntable_pan.js"></script>
+  <script type="text/javascript" src="js/trackball_pantilt.js"></script>
+  <script type="text/javascript" src="js/trackball_sphere.js"></script>
+  <!--UTILITY-->
+  <script type="text/javascript" src="js/init.js"></script>
+</head>
+
+<!-- preloader section -->
+<div class="preloader">
+  <div class="sk-spinner sk-spinner-rotating-plane"></div>
+</div>
+
+<!-- home section -->
+<section id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h1 class="wow bounceInDown rotate">Reading blog</h1>
+        <h2 class="wow bounce"> Da una panchina di Parc Güell <br> alla scoperta di Barcellona </h2>
+        <a href="#intro" class="btn btn-default smoothScroll">Inizia da qui</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- intro section -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 title">
+        
+    
+        <h2> Una pausa letteraria <br> a La Plaza de la Naturaleza</h2>
+        <hr>
+        <p>Ti presento Parc Güell, il parco più colorato e bizzarro di Barcellona. È conosciuto in tutto il mondo per le forme
+          metamorfiche e coloratissime dell'architetto Antoni Gaudì.   
+          <br> Il progetto mostra un'incredibile libertà dalle regole con il solo obiettivo di raggiungere la sfera divina
+          attraverso la linea curvilinea, il colore e la fusione stessa con la natura.
+          <br> È un sogno o realtà? <br>
+      Il cuore pulsante dell'intero sito è la piazza della Natura, caratterizzata da una balaustra ondulata che, tra le sue continue e ondose 
+      sporgenze e rientranze, diventa anche una comoda seduta da cui ammirare Barcellona.
+    
+         </p>
+          <a href="#work" class="btn btn-default smoothScroll">Continua qui</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- work section -->
+<section id="work">
+  <div class="container"> 
+    <div class="row"> 
+        <h2> Arricchirsi di più sguardi da una sola vista</h2> 
+        <hr>
+        <img src="images/gettyimages-138350741-612x612ta.jpg">
+        <p> Oggi la panchina della piazza prende vita attraverso romanzi, <br> le cui parole hanno tinto di una particolare atmosfera la città.<br>
+Scopri Barcellona attraverso le sue storie, avvicinandoti alla panchina ondulata di Gaudì</p>
+        <a href="#3dhop" class="btn btn-default smoothScroll">Dai un'occhiata alla panchina</a>
+      </div>
+   
+    </div>
+
+  </div>
+  </div>
+  </div>
+</section>
+
+<section>
+
+
+
+  <body onload="presenter.animateToTrackballPosition([1.3754494735628093, 19.92743703812508, 0, 0, 0, 1.8])">
+<div id="container">
+  <center>
+<div id="3dhop" class="tdhop"  onmousedown="if (event.preventDefault) event.preventDefault()"> 
+  <div id="tdhlg"></div>
+  <table id="cover"  onclick="$(&#39;#cover&#39;).css(&#39;display&#39;, &#39;none&#39;); helpSwitch(false);"
+    style="display: none;">
+    <tbody>
+      <tr align="center">
+        <td valign="center">
+          <!--HOTSPOT PANEL-->
+          <table class="panel" id="spot_1_panel" cellspacing="10" onclick="event.stopPropagation();"
+            style="display: none;">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <h3><img class="close_on" src="skins/minimal_light/close_on.png"
+                      onclick="$(&#39;#cover&#39;).css(&#39;display&#39;, &#39;none&#39;);" style="display: none;"><img
+                      class="close" src="skins/minimal_light/close.png" style="display: inline;" />Il Gioco dell'Angelo
+                  </h3>
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <h4>di Calos Ruiz Zafón</h4>
+                </td>
+              </tr>
+              <tr>
+               
+                <td style="width:30%"> <img id="hs1_img" src="immagini/zafonn.jpg"
+                  style="max-width: 200; max-height: 300px; display: table;"> </td>
+             
+                <td style="width:90%"> 
+                  <p class="scroll" style="max-height:350px; font-style:normal; text-align:justify; margin-top:-3px; padding:3px 3px 40px 3px;"><span class="hs_text">
+                    
+                    Nella tumultuosa Barcellona degli anni Venti, il giovane David Martín cova un sogno 
+                    inconfessabile quanto universale: diventare uno scrittore. 
+                    Quando la sorte gli offre l'occasione di pubblicare un suo racconto, 
+                    l'inaspettato successo si trasforma in un incubo.
+                  
+
+              
+                  </span></p>
+            
+                </td>
+              </tr>
+
+        </td>
+      </tr>
+    </tbody>
+
+  <!--HOTSPOT PANEL ENDS-->
+  <!--HOTSPOT PANEL2-->
+  <table class="panel" id="spot_2_panel" cellspacing="10" onclick="event.stopPropagation();" style="display: none;">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <h3><img class="close_on" src="skins/minimal_light/close_on.png"
+              onclick="$(&#39;#cover&#39;).css(&#39;display&#39;, &#39;none&#39;);" style="display: none;"><img
+              class="close" src="skins/minimal_light/close.png" style="display: inline;" />Il parque Güell </h3>
+          <hr>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4>Una citazione da "Il Gioco dell'Angelo"</h4>
+        </td>
+      </tr>
+      <tr>
+      
+          <td style="width:30%"><img id="hs1_img" src="images/casa helius.jpg"
+          style="max-width: 200; max-height: 300px; display: table;"> </td>
+      
+       <td style="width:90%"> 
+       <p class="scroll" style="max-height:350px; font-style:normal; text-align:justify; margin-top:-3px; padding:3px 3px 40px 3px;"><span class="hs_text">
+        Nel romanzo Andreas Corelli, il misterioso editore di David, vive in una casa nelle vicinanze del Parque Güell.
+        Il protagonista arriva alla casa di Corelli in taxi e racconta:"<i>Ci vollero una ventina di minuti per attraversare la città e 
+        risalire il pendio della collina su cui si trovava il <b>bosco spettrale dell'architetto Gaudì</b></i>".
+      </span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!--HOTSPOT PANEL ENDS2-->
+  <!--HOTSPOT PANEL3-->
+  <table class="panel" id="spot_3_panel" cellspacing="10" onclick="event.stopPropagation();" style="display: none;">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <h3><img class="close_on" src="skins/minimal_light/close_on.png"
+              onclick="$(&#39;#cover&#39;).css(&#39;display&#39;, &#39;none&#39;);" style="display: none;"><img
+              class="close" src="skins/minimal_light/close.png" style="display: inline;" />L'Ombra del Vento</h3>
+          <hr>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4>di Carlos Ruiz Zafòn</h4>
+        </td>
+      </tr>
+      <tr>
+        <td style="width:30%"><img src="immagini/Zafon.jpg"
+            style="max-width: 300px; max-height: 350px; display: table;" /></td>
+        <td style="width:90%"> <p class="scroll" style="max-height:350px; font-style:normal; text-align:justify; margin-top:-3px; padding:3px 3px 40px 3px;"><span class="hs_text">
+          Ambientato a Barcellona nel secondo Dopoguerra, racconta le vicende di Daniel Sempere, un ragazzo che si appassiona al libro di un talentuoso ma sconosciuto scrittore catalano. Affascinato dal romanzo, si mette sulle tracce dell'autore. In questa ricerca scoprirà luoghi sconosciuti di Barcellona, ma soprattutto se stesso.</p></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!--HOTSPOT PANEL ENDS2-->
+
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+
+  <div id="toolbar">
+    <img id="home" title="Home" src="skins/dark/home.png" /><br />
+    <!--ZOOM-->
+    <img id="zoomin" title="Zoom In" src="skins/dark/zoomin.png" /><br />
+    <img id="zoomout" title="Zoom Out" src="skins/dark/zoomout.png" /><br />
+    <!--ZOOM-->
+    <!--LIGHTING-->
+    <img id="lighting_off" title="Disable Lighting" src="skins/dark/lighting_off.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="lighting" title="Enable Lighting" src="skins/dark/lighting.png" /><br />
+    <!--LIGHTING-->
+    <!--LIGHT-->
+    <img id="light_on" title="Enable Light ControlDisable Light Control" src="skins/dark/lightcontrol_on.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="light" title="Enable Light Control" src="skins/dark/lightcontrol.png" /><br />
+    <!--LIGHT-->
+    <!--MEASURE
+    <img id="measure_on" title="Disable Measure Tool" src="skins/dark/measure_on.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="measure" title="Enable Measure Tool" src="skins/dark/measure.png" /><br />
+    MEASURE-->
+    <!--POINT PICKING-->
+    <!-- <img id="pick_on"     title="Disable PickPoint Mode" src="skins/dark/pick_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="pick"        title="Enable PickPoint Mode"  src="skins/dark/pick.png"/><br/>-->
+    <!--POINT PICKING-->
+    <!--SECTIONS-->
+    <!---  <img id="sections_on" title="Disable Plane Sections" src="skins/dark/sections_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="sections"    title="Enable Plane Sections"  src="skins/dark/sections.png"/><br/>-->
+    <!--SECTIONS-->
+    <!--COLOR-->
+    <!--- <img id="color_on"    title="Disable Solid Color"    src="skins/dark/color_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="color"       title="Enable Solid Color"     src="skins/dark/color.png"/><br/>-->
+    <!--COLOR-->
+    <!-- hotspot-->
+    <img id="hotspot_on" title="Hide Hotspots" src="skins/dark/pin_on.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="hotspot" title="Show Hotspots" src="skins/dark/pin.png" /><br />
+
+    <!--hotspot-->
+    <!--CAMERA
+    <img id="perspective" title="Perspective Camera" src="skins/dark/perspective.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="orthographic" title="Orthographic Camera" src="skins/dark/orthographic.png" /><br />
+    CAMERA-->
+    <!--SCREENSHOT
+  <img id="screenshot" title="Save Screenshot"   src="skins/dark/screenshot.png"/><br/>-->
+    <!--SCREENSHOT-->
+    <!--FULLSCREEN-->
+    <img id="full_on" title="Exit Full Screen" src="skins/dark/full_on.png"
+      style="position:absolute; visibility:hidden;" />
+    <img id="full" title="Full Screen" src="skins/dark/full.png" />
+    <!--FULLSCREEN-->
+  </div>
+
+  <!--MEASURE
+  <div id="measure-box" class="output-box">Measured length
+    <hr /><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span>
+  </div>
+ MEASURE-->
+
+  <!--POINT PICKING-->
+  <div id="pickpoint-box" class="output-box">XYZ picked point
+    <hr /><span id="pickpoint-output" class="output-text" onmousedown="event.stopPropagation()">[ 0 , 0 , 0 ]</span>
+  </div>
+  <!--POINT PICKING-->
+
+  <!--SECTIONS-->
+  <div id="sections-box" class="output-box">
+    <table class="output-table" onmousedown="event.stopPropagation()">
+      <tr>
+        <td>Plane</td>
+        <td>Position</td>
+        <td>Flip</td>
+      </tr>
+      <tr>
+        <td><img id="xplane_on" title="Disable X Axis Section" src="skins/icons/sectionX_on.png"
+            onclick="sectionxSwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+          <img id="xplane" title="Enable X Axis Section" src="skins/icons/sectionX.png"
+            onclick="sectionxSwitch()" /><br />
+        </td>
+        <td><input id="xplaneSlider" class="output-input" type="range" title="Move X Axis Section Position" /></td>
+        <td><input id="xplaneFlip" class="output-input" type="checkbox" title="Flip X Axis Section Direction" /></td>
+      </tr>
+      <tr>
+        <td><img id="yplane_on" title="Disable Y Axis Section" src="skins/icons/sectionY_on.png"
+            onclick="sectionySwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+          <img id="yplane" title="Enable Y Axis Section" src="skins/icons/sectionY.png"
+            onclick="sectionySwitch()" /><br />
+        </td>
+        <td><input id="yplaneSlider" class="output-input" type="range" title="Move Y Axis Section Position" /></td>
+        <td><input id="yplaneFlip" class="output-input" type="checkbox" title="Flip Y Axis Section Direction" /></td>
+      </tr>
+      <tr>
+        <td><img id="zplane_on" title="Disable Z Axis Section" src="skins/icons/sectionZ_on.png"
+            onclick="sectionzSwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+          <img id="zplane" title="Enable Z Axis Section" src="skins/icons/sectionZ.png"
+            onclick="sectionzSwitch()" /><br />
+        </td>
+        <td><input id="zplaneSlider" class="output-input" type="range" title="Move Y Axis Section Position" /></td>
+        <td><input id="zplaneFlip" class="output-input" type="checkbox" title="Flip Z Axis Section Direction" /></td>
+      </tr>
+    </table>
+    <table class="output-table" onmousedown="event.stopPropagation()" style="text-align:right;">
+      <tr>
+        <td>Show planes<input id="showPlane" class="output-input" type="checkbox" title="Show Section Planes"
+            style="bottom:-3px;" /></td>
+        <td>Show edges<input id="showBorder" class="output-input" type="checkbox" title="Show Section Edges"
+            style="bottom:-3px;" /></td>
+      </tr>
+    </table>
+  </div>
+
+  <!--SECTIONS-->
+
+  <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/blue-gradient.png"></canvas>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section>
+
+  
+   <h1> Processo d'acquisizione </h1>
+   <h2>Scelta del modello e foto</h2>
+      <img src="Immagini/IMG_2960.jpg"  width="400" >
+    </a>
+    <div class="desc"></div>
+    </div>
+    <br>
+    
+    <h2> Metashape</h2>
+      <img src="Immagini/pointcloud con foto1.jpg"  height="400">
+    </a>
+    <div class="desc"></div>
+    </div>
+    
+    <img src="Immagini/pointcloud versione 1.jpg"  height="400">
+  </a>
+  <div class="desc"></div>
+  </div>
+ 
+  <img src="Immagini/confidence.jpg"  height="400">
+  </a>
+  <div class="desc"></div>
+  </div>
+  
+    <h2> Pulizia del Modello su Meshlab</h2>
+      <img src="immagini/snapshot versione 2 errori00.png"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+    </div>
+  
+      <h2>Problema dei bordi</h2>
+        <img src="Immagini/snapshot bordi00.png"  width="600" height="400">
+      </a>
+      <div class="desc"></div>
+      </div>
+  
+       
+          <img src="Immagini/snapshot bordi01.png"   height="400">
+        </a>
+        <div class="desc"></div>
+        </div>
+        
+   
+ <h2> Confronto con altre versioni ed errori</h2>
+      <img src="Immagini/snapshot panchina 1 errori01.png"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+    </div>
+
+    
+    
+            <img src="immagini/confronto tra modello 1 e 2.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+          
+       
+            <img src="Immagini/modelli confronto.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+       
+            <img src="Immagini/confronto luce.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          <h2> 3D HOP</h2>
+        
+       
+            <img src="Immagini/3d hop.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+          <img src="Immagini/parc guell.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+          <img src="Immagini/hotspot.PNG"   height="400">
+        </a>
+        <div class="desc"></div>
+        </div>
+        
+           <img src="Immagini/tutan.PNG"   height="400">
+      </a>
+      <div class="desc"></div>
+      </div>
+      
+      <img src="Immagini/hotspot code.PNG"   height="400">
+    </a>
+    <div class="desc"></div>
+    </div>
+    
+        <h2> Sito web</h2>
+        <img src="Immagini/sito web.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+          <img src="Immagini/sito.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          <h2> "Just a little bit of CSS"</h2>
+          <img src="Immagini/css.PNG"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          <h2> Idea della pagina: legame tra passione per i libri e arte</h2>
+          <img src="Immagini/gettyimages-138350741-612x612.jpg"   height="400">
+          </a>
+          <div class="desc"></div>
+          </div>
+          
+          
+</section>
+
+
+<!-- JAVASCRIPT JS FILES -->
+<script type="text/javascript">
+  var presenter = null;
+
+  function setup3dhop() {
+    presenter = new Presenter("draw-canvas");
+
+    presenter.setScene({
+      meshes: {
+        "mesh_1": { url: "models/versione 4 multiresolution.nxz" },
+        "mesh_sphere": { url: "models/spot_1_.ply" },
+        "mesh_sphere2": { url: "models/spot_2.ply" },
+        "mesh_sphere3": { url: "models/spot_3_.ply" },
+      },
+      modelInstances: {
+        "model_1": {
+          mesh: "mesh_1",
+
+        },
+
+      },
+      spots: {
+        "spot_1": {
+          mesh: "mesh_sphere",
+
+        },
+        "spot_2": {
+          mesh: "mesh_sphere2",
+
+        },
+        "spot_3": {
+          mesh: "mesh_sphere3",
+
+        },
+      },
+      trackball: {
+        type: TurntablePanTrackball,
+        trackOptions: {
+          startPhi: 210.0,
+          startTheta: 15.0,
+          startDistance: 1.8,
+          minMaxPhi: [-180, 180],
+          minMaxTheta: [-70.0, 180.0],
+          minMaxDist: [0.5, 3.0]
+        }
+      }
+    });
+
+    //--MEASURE--
+    presenter._onEndMeasurement = onEndMeasure;
+    //--MEASURE--
+
+    //--HOTSPOT1--
+    presenter.setSpotVisibility(HOP_ALL, false, true);
+
+    presenter._onPickedSpot = onPickedSpot;
+    //--HOTSPOT1--
+    //--POINT PICKING--
+    presenter._onEndPickingPoint = onEndPick;
+    //--POINT PICKING--
+
+    //--SECTIONS--
+    sectiontoolInit();
+    //--SECTIONS--
+  };
+ 
+  function actionsToolbar(action) {
+    if (action == 'home') presenter.animateToTrackballPosition([1.3754494735628093, 19.92743703812508, 0, 0, 0, 1.8]);
+    //--FULLSCREEN--
+    else if (action == 'full' || action == 'full_on') fullscreenSwitch();
+    //--FULLSCREEN--
+    //--ZOOM--
+    else if (action == 'zoomin') presenter.zoomIn();
+    else if (action == 'zoomout') presenter.zoomOut();
+    //--ZOOM--
+    //--LIGHTING--
+    else if (action == 'lighting' || action == 'lighting_off') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
+    //--LIGHTING--
+    //--LIGHT--
+    else if (action == 'light' || action == 'light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+    //--LIGHT--
+    //--CAMERA--
+    else if (action == 'perspective' || action == 'orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
+    //--CAMERA--
+    //--COLOR--
+    else if (action == 'color' || action == 'color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
+    //--COLOR--
+    //--hotspot--
+    else if (action == 'hotspot' || action == 'hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+    //--hotspot--
+    //--MEASURE--
+    else if (action == 'measure' || action == 'measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+    //--MEASURE--
+    //--POINT PICKING--
+    else if (action == 'pick' || action == 'pick_on') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
+    //--POINT PICKING--
+    //--SCREENSHOT--
+    else if (action == 'screenshot') presenter.saveScreenshot();
+    //--SCREENSHOT--
+    //--SECTIONS--
+    else if (action == 'sections' || action == 'sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
+    //--SECTIONS--
+  }
+
+  function onPickedSpot(id) {
+    switch (id) {
+      //--HOTSPOTS COMMANDS--
+      case 'spot_1': showPanel('spot_1_panel'); break;
+      case 'spot_2': showPanel('spot_2_panel'); break;
+      case 'spot_3': showPanel('spot_3_panel'); break;
+    }
+  }
+  //--MEASURE--
+  function onEndMeasure(measure) {
+    // measure.toFixed(2) sets the number of decimals when displaying the measure
+    // depending on the model measure units, use "mm","m","km" or whatever you have
+    $('#measure-output').html(measure.toFixed(2) + "mm");
+  }
+  //--MEASURE--
+  //--hotspot--
+
+
+  //--hotspot--
+  //--PICKPOINT--
+  function onEndPick(point) {
+    // .toFixed(2) sets the number of decimals when displaying the picked point	
+    var x = point[0].toFixed(2);
+    var y = point[1].toFixed(2);
+    var z = point[2].toFixed(2);
+    $('#pickpoint-output').html("[ " + x + " , " + y + " , " + z + " ]");
+  }
+  //--PICKPOINT--	
+
+  $(document).ready(function () {
+    init3dhop();
+
+    setup3dhop();
+    resizeCanvas(1000, 800);
+    
+    moveToolbar(20, 20);
+  });
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+</script>
 </body>
+
 </html>
