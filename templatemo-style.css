@@ -1,0 +1,394 @@
+/*
+Impulse Template
+http://www.templatemo.com/tm-469-impulse
+*/
+
+body {
+	background: #f8f8f8;
+	color: #000000;
+	font-family: 'Proxima', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+}
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	text-align: center;
+	vertical-align: middle;
+	align-content: center;
+
+}
+@font-face {
+	font-family: 'Proxima';
+	src: url(../fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+	font-family: 'Proxima Bold';
+	src: url(../fonts/ProximaNova-Bold.otf);
+}
+@font-face {
+	font-family: 'Mythias';
+	src: url(../fonts/Mythias.otf);
+}
+ h2, h3, h4, h5, h6 {
+	font-family: "Proxima Bold";
+	font-weight: bold;
+	line-height: 50px;
+}
+
+
+p {
+	letter-spacing: 1px;
+	line-height: 28px;
+}
+hr {
+	border-color: #e0e0e0;
+	margin: 0 auto 20px auto;
+	width: 100px !important;
+}
+h1 {
+	font-family: "Mythias";
+	font-size: 60px;
+	color: #000000;
+
+	
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 60px;
+	color: #000000;
+	text-align: center;
+
+}
+h3 {
+	font-size: 30px;
+	line-height: 50px;
+}
+
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+.title {
+	padding-bottom: 40px;
+}
+.title h2 {
+	color: #202020;
+	line-height: 10px;
+	padding-bottom: 33px;
+}
+.title p {
+	padding-top: 0px;
+	padding-bottom: 7px;
+}
+.parallax-section {
+	background-attachment: fixed !important;
+	background-size: cover !important;
+}
+/* preloader section */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+}
+.sk-spinner-rotating-plane.sk-spinner {
+	width: 40px;
+	height: 40px;
+	background-color: #eb5424;
+	border-radius: 50%;
+	-webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+	animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+/* navigation section */
+.navbar-default {
+	background: #fff;
+	border: none;
+	box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.04);
+	margin: 0 !important;
+}
+.navbar-default .navbar-brand {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 0;
+	line-height: 40px !important;
+}
+.navbar-default .navbar-nav li a {
+	color: #606060;
+	font-weight: bold;
+	padding-right: 20px;
+	padding-left: 20px;
+	line-height: 40px;
+}
+.navbar-default .navbar-nav li a:hover {
+	color: #eb5424;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #606060;
+	background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #eb5424;
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+	border: none;
+	padding-top: 12px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background: #eb5424;
+	border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+
+/* home section */
+#home {
+	background: url('../images/park-guell_header-114423.jpeg') 20% 0 no-repeat ;
+	color: #ffffff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+#home h1 {
+	font-family: "Mythias";
+	letter-spacing: 4px;
+	font-size: 100px;
+}
+#home h2 {
+	letter-spacing: 4px;
+}
+.wow{
+	font-family: "Mythias"
+	src: url('/fonts/Mythias.otf');
+	
+}
+#home .btn {
+	background: #eb5424;
+	border-radius: 4px;
+	border: none;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 20px 40px;
+	margin-top: 60px;
+}
+#home .btn:hover {
+	background: #fff;
+	color: #eb5424;
+	transition: all 0.4s ease-in-out;
+}
+
+/* intro section */
+#intro {
+	padding-top: 180px;
+	padding-bottom: 80px;
+	background: url('../images/parc-guell-img_7484.jpg') 2%    no-repeat;
+	  }
+	  
+#intro .row {
+	background-color: #ffffffe6; 
+
+}
+#intro .p {
+	color: #000000;
+}
+#intro h4 {
+	padding-bottom: 16px;
+	line-height: 120%;
+}
+/* work section */
+#work {
+	background-color: #ffffff;
+	align-items: center;
+	-ms-flex-align: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	align-content: center;
+
+
+}
+#work .container {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	line-height: 50px;
+	
+	display: flex-end;
+}
+#work .row {
+	justify-content: flex-end;
+	
+
+}
+#work .title {
+	padding: 100px 60px 60px 60px;
+	line-height: 50px;
+	text-align: center;
+}
+	
+#intro .p {
+	text-align: center;
+}
+#work .bg-black {
+	background-color: #303030;
+	color: #ffffff;
+}
+#work .bg-red {
+	background-color: #eb5424;
+	color: #ffffff;
+}
+#work h3 {
+	padding-bottom: 40px;
+	line-height: 60px;
+}
+#work h2 {
+	padding-bottom: 40px;
+	line-height: 60px;
+	text-align: center;
+}
+#work .fa {
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 40px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	transition: all 0.4s ease-in-out;
+	margin-top: 40px;
+}
+#work .fa:hover {
+	background-color: #ffffff;
+	border-radius: 50%;
+	color: #303030;
+}
+
+
+
+/* intro:benvenuto al park guell */
+#intro h2 {
+	font-size: 40px;
+	line-height: 50px;
+}
+#work .title {
+	padding: 80px 20px 20px 20px;
+	line-height: 40px;
+}
+
+
+/* contact section */
+#contact {
+	background: #f6f6f6;
+	color: #ffffff;
+	padding-top: 100px;
+	padding-bottom: 80px;
+
+}
+#contact h2 {
+	color: #ffffff;
+	
+
+}
+
+
+
+#contact input {
+	height: 50px;
+}
+#contact input[type="submit"] {
+	background-color: #eb5424;
+	color: #ffffff;
+	height: 60px;
+	font-weight: bold;
+	transition: all 0.4s ease-in-out;
+}
+#contact input[type="submit"]:hover {
+	background-color: #202020;
+}
+
+
+
+
+@media (max-width:400px) {
+#home h1 {
+	font-size: 32px;
+	font-family: "Mythias";
+}
+#home h2 {
+	font-size: 22px;
+}
+#intro h2 {
+	font-size: 20px;
+	line-height: 50px;
+}
+}
+#3dhop{
+	position				:fixed;
+	width					:100%;
+	height					:100%; }
+	
+	
+#cover{ display:none; position:absolute; z-index:100; width:100%; height:100%; top:0; left:0; background-color:rgba(50, 50, 50, 0.5); -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; -webkit-touch-callout:none; touch-action:none; -ms-touch-action:none; }
+
+.panel { display:none; width:350px; font-size:80%; font-family:verdana; font-style:italic; color:#f8f8f8; text-align:left; background-color:rgba(50, 50, 50, 0.97); border:2px solid #f8f8f8; border-radius:10px; box-shadow:1px 1px 10px #f8f8f8; -webkit-box-shadow:1px 1px 10px #f8f8f8; -moz-box-shadow:1px 1px 10px #f8f8f8; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; -webkit-touch-callout:none; touch-action:none; -ms-touch-action:none; }
+
+.close, .close_on { position:relative; margin-left:99%; margin-top:-25px;width:25px; height:25px;background-color:#323232; border:2px solid #f8f8f8; border-radius:50%; box-shadow:1px -1px 10px #f8f8f8; -webkit-box-shadow:1px -1px 10px #f8f8f8; -moz-box-shadow:1px -1px 10px #f8f8f8; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; -webkit-touch-callout:none; touch-action:none; -ms-touch-action:none; }
+
+.close_on { display:none; }
+
+.close, .close_on, :hover { cursor:pointer; }
+
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+  }
+  
+  div.gallery:hover {
+	border: 1px solid #777;
+  }
+  
+  div.gallery img {
+	width: 100%;
+	height: auto;
+  }
+  
+  div.desc {
+	padding: 15px;
+	text-align: center;
+  }
+  
+
+  
